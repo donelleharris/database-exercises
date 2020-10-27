@@ -1,6 +1,5 @@
 USE codeup_test_db;
 
-
 SELECT 'All Albums' AS 'Info:';
 SELECT * FROM albums;
 SELECT 'All Albums released prior to 1980.' AS 'Info:';
