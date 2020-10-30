@@ -15,12 +15,11 @@ SELECT *
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31';
 
-SELECT CONCAT(first_name, ' ', last_name), birth_date, hire_date, DATEDIFF(curdate(), hire_date)
+SELECT CONCAT(first_name, ' ', last_name), DATEDIFF(curdate(), hire_date)
 FROM employees
 WHERE birth_date LIKE '%-12-25'
 AND hire_date BETWEEN '1990-01-01' AND '1999-12-31'
-ORDER BY birth_date
-LIMIT 100;
+ORDER BY DATEDIFF(curdate(), hire_date);
 
 
 SELECT DISTINCT *
