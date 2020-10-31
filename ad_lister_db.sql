@@ -1,4 +1,4 @@
-use AdLister_db;
+use ad_lister_db;
 
 CREATE TABLE users (
 id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -68,3 +68,11 @@ VALUES (1, 1), (1, 2), #miter saw
        (3, 12), (3, 13), #1/2 acre lot
        (4, 8), (4, 11), #rv
        (5, 5), (5, 6); #refrigerator
+
+INSERT INTO ad_post (user_id, title, content)
+VALUES (1, 'Microwave', 'Samsung 1200 watt microwave'),
+       (1, '2007 Chevy Silverado 1500', '2007 Chevy Silverado 1/2 ton truck, blue, 205K miles');
+
+INSERT INTO post_category(post_id, category_id)
+VALUES (6, 5), (6, 7), #microwave
+       (7, 8), (7, 10); #truck
