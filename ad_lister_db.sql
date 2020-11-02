@@ -4,8 +4,8 @@ CREATE TABLE users (
 id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 first_name VARCHAR(50),
 last_name VARCHAR(100),
-user_name VARCHAR(20),
-user_email VARCHAR(50),
+user_name VARCHAR(20) UNIQUE,
+user_email VARCHAR(50) UNIQUE,
 PRIMARY KEY (id)
 );
 
@@ -76,3 +76,31 @@ VALUES (1, 'Microwave', 'Samsung 1200 watt microwave'),
 INSERT INTO post_category(post_id, category_id)
 VALUES (6, 5), (6, 7), #microwave
        (7, 8), (7, 10); #truck
+
+
+ALTER TABLE users
+    ADD user_pw VARCHAR(24) NOT NULL;
+
+ALTER TABLE users
+    MODIFY COLUMN user_name VARCHAR(20) UNIQUE,
+    MODIFY COLUMN user_email VARCHAR(50) UNIQUE;
+
+UPDATE users
+    SET user_pw = 'Codeup5!'
+    WHERE id = 5;
+
+UPDATE users
+SET user_pw = 'Codeup4!'
+WHERE id = 4;
+
+UPDATE users
+SET user_pw = 'Codeup3!'
+WHERE id = 3;
+
+UPDATE users
+SET user_pw = 'Codeup2!'
+WHERE id = 2;
+
+UPDATE users
+SET user_pw = 'Codeup1!'
+WHERE id = 1;
