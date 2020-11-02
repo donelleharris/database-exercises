@@ -5,12 +5,13 @@ INSERT INTO users(first_name, last_name, user_name, user_email) VALUES
     ('Ryan', 'Kendall', 'rmk1775', 'ryan@codeup.com'),
     ('Blossom', 'Perez', 'blperez', 'blossom@codeup.com'),
     ('Chris', 'Parker', 'chrisparker', 'chris@codeup.com'),
-    ('Sahara', 'Tijol', 'stijol', 'sahara@codeup.com');
+    ('Sahara', 'Tijol', 'stijol', 'sahara@codeup.com'),
+    ('Caleb', 'Wheeler', 'cwheeler', 'caleb@codeup.com'),
+    ('Cory', 'Holley', 'cholley', 'cory@codeup.com');
 
 INSERT INTO user_categories(name) VALUES
 ('Admin'), #1
-('Teacher'), #2
-('Student'); #3
+('Student'); #2
 
 INSERT INTO quiz_categories(name) VALUES
 ('Math'), #1
@@ -20,10 +21,16 @@ INSERT INTO quiz_categories(name) VALUES
 ('Science'),  #5
 ('Life Science'), #6
 ('Physics'), #7
-('Social Studies'), #8
-('American History'), #9
-('World History'), #10
-('World Geography'), #11
-('Reading/Language Arts'), #12
-('Grammar'), #13
-('Reading Comprehension'); #14
+('Chemistry'), #8
+('Social Studies'), #9
+('American History'), #10
+('World History'), #11
+('World Geography'), #12
+('Reading/Language Arts'), #13
+('Grammar'), #14
+('Reading Comprehension'); #15
+
+
+INSERT INTO user_category(user_id, category_id)
+VALUES (1, 1), (2, 2), (3, 1), (4, 2),
+       (5, 1), (6, 2), (7, 1);
